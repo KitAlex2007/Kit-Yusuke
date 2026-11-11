@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#090613">
+  <meta name="description" content="A neon synthwave space celebrating Kit and Yusuke.">
+  <title>Kit &amp; Yusuke — Neon Nights</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <canvas id="starfield" aria-hidden="true"></canvas>
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
+
+  <div class="site-shell">
+    <header class="topbar glass">
+      <a class="brand" href="#" aria-label="Kit and Yusuke home">
+        <span class="brand-mark" aria-hidden="true">♡</span>
+        <span>
+          <span class="brand-title">NEON <span class="gradient-text">NIGHTS</span></span>
+          <span class="brand-subtitle">A little universe for Kit &amp; Yusuke</span>
+        </span>
+      </a>
+
+      <nav class="controls" aria-label="Animation settings">
+        <button class="control-button cyan" id="playPauseBtn" type="button">
+          <span id="playIcon" aria-hidden="true">Ⅱ</span>
+          <span id="playText">Pause</span>
+        </button>
+        <button class="control-button pink" id="speedBtn" type="button">
+          <span aria-hidden="true">↗</span>
+          <span>Speed: <b id="speedVal">Fast</b></span>
+        </button>
+        <button class="control-button purple" id="themeBtn" type="button">
+          <span aria-hidden="true">◈</span>
+          <span>Theme: <b id="themeName">Neon Cyan</b></span>
+        </button>
+      </nav>
+    </header>
+
+    <main class="main-content">
+      <section class="hero-card glass" aria-labelledby="main-title">
+        <div class="scene" role="img" aria-label="A glowing neon moon above a futuristic synthwave landscape">
+          <div class="scene-sun"></div>
+          <div class="scene-grid"></div>
+          <div class="scene-stars" aria-hidden="true">✦　·　✧　　 ·　✦</div>
+          <div class="scene-caption">
+            <span>☾ &nbsp; MOONLIT MOMENTS</span>
+            <span class="scene-names">KIT <i>✦</i> YUSUKE</span>
+          </div>
+        </div>
+
+        <div class="eyebrow">TWO STORIES · ONE LITTLE UNIVERSE</div>
+        <h1 id="main-title">A NIGHT <span class="gradient-text">TO REMEMBER</span></h1>
+        <p class="intro">Some moments become memories. Some people make those moments brighter.</p>
+
+        <div class="message-stage" aria-live="polite">
+          <p id="lovePhrase" class="script-message">Choose a little note ✨</p>
+        </div>
+
+        <div class="action-buttons">
+          <button id="expressLoveBtn" class="primary-button" type="button">
+            <span aria-hidden="true">✦</span> Reveal a note
+          </button>
+          <button id="openMsgBtn" class="secondary-button" type="button">
+            <span aria-hidden="true">✉</span> Open the letter
+          </button>
+        </div>
+        <p class="tiny-note">Tap the buttons and let the night change.</p>
+      </section>
+    </main>
+
+    <footer class="footer glass">
+      <span><span class="status-dot"></span> SYNTHWAVE SPACE</span>
+      <span>Made with care for Kit &amp; Yusuke <span aria-hidden="true">✦</span></span>
+    </footer>
+  </div>
+
+  <dialog class="letter-dialog" id="messageDialog" aria-labelledby="dialogTitle">
+    <article class="letter-card glass">
+      <button class="close-button" id="closeMsgBtn" type="button" aria-label="Close letter">×</button>
+      <div class="letter-icon" aria-hidden="true">✉</div>
+      <p class="eyebrow">A NOTE UNDER THE STARS</p>
+      <h2 id="dialogTitle">For Kit &amp; Yusuke</h2>
+      <p class="letter-copy">
+        Not every meaningful moment needs a grand occasion. Sometimes it is a quiet conversation,
+        a shared laugh, or simply knowing that someone is there. May this little corner of the
+        universe keep a place for every bright memory, every unexpected adventure, and every
+        ordinary day that turns out to be special.
+      </p>
+      <button class="primary-button letter-done" id="doneBtn" type="button">Back to the stars ✦</button>
+    </article>
+  </dialog>
+</body>
+</html>
